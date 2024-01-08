@@ -1,0 +1,235 @@
+"CareerGame"
+{
+    "InitialPoints"             "8"
+    "MatchWins"                 "3"
+    "MatchWinBy"                "2"
+    "Characters"                "Denur Farah Najwa Aulia Andrea Kristina Ikctiar Adam Rafli Rafi Rizky Banny Naufal Marwan Wisnu Bima Agung Deni Azkal Fariz Tarigan Faiz Fathir Daiz Calvin Lukman Farel Eko Zulfikar Bolu Febri Rendy Bolang Sapta Henokh Aminah Bakoy Hendid Wanto Rahmedi"
+
+    // CostAvailability: for each bot point cost, specify the number of reputation points needed to hire him.
+    // If a value is not present or 0, that cost and higher are assumed to be always available.
+    "CostAvailability"
+    {
+        "1"						"1"
+        "2"						"1"
+        "3"						"1"
+        "4"						"15"
+        "5"						"21"
+    }
+
+    "Maps"
+    {
+        // Maps are in triplets
+        // 'minEnemies' defines the minimum number of enemies of the map (from the 'bots' entry, left to right)
+        // 'threshold' defines the Reputation Point value above which one enemy is added for every additional RP until we run out of bots on the 'bots' line
+
+        // A note on tasks:
+        //
+        // tasks are one of the following:
+        //    kill         <N> [survive | inarow]
+        //    killwith     <N> <weapon> [survive | inarow]
+        //    killblind    <N> [survive | inarow]
+        //    winfast      <S> [survive | inarow]
+        //    headshot     <N> [survive | inarow]
+        //    headshotwith <N> <weapon> [survive | inarow]
+        //    killall
+        //    rescue       <N> [survive | inarow]
+        //    rescueall
+        //    injure       <N> [survive | inarow]
+        //    injurewith   <N> <weapon> [survive | inarow]
+        //
+        // tasks can contain a numeric value (# of kills, # of seconds, etc)
+        // tasks can contain a weapon name or weapon classname (for the killwith and headshotwith tasks)
+        // you can add "survive" so the player must survive to the end of the round to complete the task
+        // you can add "inarow" so the player must complete the task N times without dying (across round boundaries)
+        // group words of a task with '.  I.e. 'kill 3'
+        //
+        // Weapon names/classes are:
+        //    scout
+        //    xm1014
+        //    mac10
+        //    aug
+        //    ump45
+        //    sg550
+        //    galil
+        //    famas
+        //    awp
+        //    mp5
+        //    m249
+        //    m3
+        //    m4a1
+        //    tmp
+        //    sg552
+        //    ak47
+        //    p90
+        //    shield
+        //    weapon
+        //    knife
+        //    grenade (text is singular)
+        //    hegren  (text is plural, but the behavior is the same)
+        //    pistol
+        //    SMG
+        //    machinegun
+        //    shotgun
+        //    rifle
+        //    sniper
+        //    fn57
+        //    elites
+
+        // - start ------------------------------------------
+        "de_dust_cz"
+        {
+            "bots"        "Ben Eddie Oscar Sam Travis Kirk Ray"
+            "minEnemies"  "3"
+            "threshold"   "8"
+            "tasks"       "'kill 12' 'kill 3 survive' 'plant 1 survive'"
+            "FriendlyFire"  "1"
+        }
+        "cs_office_cz"
+        {
+            "bots"        "Ben Eddie Oscar Sam Travis Kirk Ray"
+            "minEnemies"  "3"
+            "threshold"   "8"
+            "tasks"       "'kill 12' 'killwith 3 mp5 survive' 'winfast 45'"
+            "FriendlyFire"  "1"
+        }
+        "de_prodigy_cz"
+        {
+            "bots"        "Ben Eddie Oscar Sam Travis Kirk Ray"
+            "minEnemies"  "3"
+            "threshold"   "8"
+            "tasks"       "'kill 12' 'killwith 3 scout survive' 'plant 1 survive'"
+            "FriendlyFire"  "1"
+        }
+ 
+        // - early -------------------------------------------
+        "de_tides_cz"
+        {
+            "bots"        "Sam Travis Kirk Ray Cole Igor Larry Maverick"
+            "minEnemies"  "5"
+            "threshold"   "11"
+            "tasks"       "'kill 14' 'killwith 6 xm1014' 'plant 1 survive'"
+            "FriendlyFire"  "1"
+        }
+        "cs_italy_cz"
+        {
+            "bots"        "Sam Travis Kirk Ray Cole Igor Larry Maverick"
+            "minEnemies"  "5"
+            "threshold"   "11"
+            "tasks"       "'killwith 7 elites' 'killwith 7 awp' 'injurewith 1 grenade'"
+            "FriendlyFire"  "1"
+        }
+        "de_inferno_cz"
+        {
+            "bots"        "Sam Travis Kirk Ray Cole Igor Larry Maverick"
+            "minEnemies"  "6"
+            "threshold"   "11"
+            "tasks"       "'kill 14' 'killwith 4 sg552 inarow' 'killblind 1 survive'"
+            "FriendlyFire"  "1"
+        }
+
+        // - halfway ----------------------------------------
+        "de_dust2_cz"
+        {
+            "bots"        "Sam Travis Kirk Ray Cole Igor Larry Maverick"
+            "minEnemies"  "6"
+            "threshold"   "14"
+            "tasks"       "'kill 16' 'killwith 4 g3sg1 inarow' 'plant 1 survive'"
+            "FriendlyFire"  "1"
+        }
+        "cs_militia_cz"
+        {
+            "bots"        "Sam Travis Kirk Ray Cole Igor Larry Maverick"
+            "minEnemies"  "6"
+            "threshold"   "14"
+            "tasks"       "'kill 16' 'killblind 1 survive' 'winfast 45 survive'"
+            "FriendlyFire"  "1"
+        }
+        "de_stadium_cz"
+        {
+            "bots"        "Sam Travis Kirk Ray Cole Igor Larry Maverick"
+            "minEnemies"  "6"
+            "threshold"   "14"
+            "tasks"       "'kill 16' 'killwith 4 sg552 inarow' 'plant 1 survive'"
+            "FriendlyFire"  "1"
+        }
+
+        // - halfway ----------------------------------------
+        "de_chateau_cz"
+        {
+            "bots"        "Cole Igor Larry Maverick Tex Lou Rooster Alex"
+            "minEnemies"  "7"
+            "threshold"   "17"
+            "tasks"       "'kill 18' 'killblind 1 survive' 'killwith 4 m249 inarow'"
+            "FriendlyFire"  "1"
+        }
+        "cs_havana_cz"
+        {
+            "bots"        "Cole Igor Larry Maverick Jake Lou Rooster Alex"
+            "minEnemies"  "7"
+            "threshold"   "17"
+            "tasks"       "'kill 18' 'killwith 1 knife' 'winfast 45 survive'"
+            "FriendlyFire"  "1"
+        }
+        "de_cbble_cz"
+        {
+            "bots"        "Cole Igor Larry Maverick Ace Lou Rooster Alex"
+            "minEnemies"  "7"
+            "threshold"   "17"
+            "tasks"       "'kill 18' 'killwith 4 p90 inarow' 'plant 1 survive'"
+            "FriendlyFire"  "1"
+        }
+
+        // - late -------------------------------------------
+        "de_aztec_cz"
+        {
+            "bots"        "Igor Larry Maverick Tex Lou Rooster Alex Sandman"
+            "minEnemies"  "8"
+            "threshold"   "20"
+            "tasks"       "'kill 20' 'killwith 6 scout' 'plant 1 survive'"
+            "FriendlyFire"  "1"
+        }
+        "cs_downed_cz"
+        {
+            "bots"        "Igor Larry Maverick Tex Lou Rooster Alex Steel"
+            "minEnemies"  "8"
+            "threshold"   "20"
+            "tasks"       "'kill 20' 'killwith 6 ak47' 'winfast 45 survive'"
+            "FriendlyFire"  "1"
+        }
+        "de_airstrip_cz"
+        {
+            "bots"        "Cole Igor Larry Maverick Tex Lou Rooster Alex"
+            "minEnemies"  "8"
+            "threshold"   "20"
+            "tasks"       "'kill 20' 'killwith 6 p90' 'killwith 3 g3sg1 survive'"
+            "FriendlyFire"  "1"
+        }
+
+        // - end --------------------------------------------
+        "de_piranesi_cz"
+        {
+            "bots"        "Rooster Lou Tex Alex Sandman Steel Eagle Bear"
+            "minEnemies"  "8"
+            "threshold"   "23"
+            "tasks"       "'kill 22' 'killwith 6 sg552' 'killblind 2 survive'"
+            "FriendlyFire"  "1"
+        }
+        "de_fastline_cz"
+        {
+            "bots"        "Rooster Lou Tex Alex Sandman Steel Eagle Duke"
+            "minEnemies"  "8"
+            "threshold"   "23"
+            "tasks"       "'kill 24' 'killwith 6 p90' 'killwith 1 grenade survive'"
+            "FriendlyFire"  "1"
+        }
+        "de_torn_cz"
+        {
+            "bots"        "Maverick Rooster Duke Bear Sandman Steel Eagle Barney"
+            "minEnemies"  "8"
+            "threshold"   "23"
+            "tasks"       "'kill 27' 'killwith 6 deagle' 'killwith 4 m4a1 survive'"
+            "FriendlyFire"  "1"
+        }
+    }
+}
+ 

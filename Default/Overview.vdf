@@ -1,0 +1,16 @@
+"MissionPack"
+{
+  "Author"      "Dewa (adydetra)"
+  "Title"       "RPL"
+  "Description" "These are the RPL version of Counter-Strike: Condition Zero mission."
+  "URL"         "https://www.adydetra.my.id"
+  "SoloPlay"	"1"
+  "CoopPlay"	"0"
+  "Team"	"T"
+  "BGColor1"	"47 62 90"
+  "BGColor2"	"0 0 0"
+  "TextColor"	"255 255 255"
+
+  "BotProfile"  "BotCampaignProfile.db"
+}
+ 

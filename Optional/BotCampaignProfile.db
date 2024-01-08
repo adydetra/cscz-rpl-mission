@@ -1,0 +1,1021 @@
+//----------------------------------------------------------------------------
+// BotCampaignProfile.db
+// Author: Warman
+//
+// This database defines all of the bot "personalities" that are used
+// in the CZ Campaign.
+//
+
+
+//----------------------------------------------------------------------------
+//
+// All profiles begin with this data and overwrite their own
+//
+Default
+	Skill = 50
+	Aggression = 50
+	ReactionTime = 0.3
+	AttackDelay = 0
+	Teamwork = 75
+	WeaponPreference = none
+	Cost = 0
+	Difficulty = NORMAL
+	VoicePitch = 100
+	Skin = 0
+End
+
+//----------------------------------------------------------------------------
+//
+// These templates inherit from Default and override with their values
+// The name of the template defines a type that is used by individual bot profiles
+//
+
+// weapon preference templates
+Template Rifle
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+End
+
+Template RifleT
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galil
+	WeaponPreference = famas
+	WeaponPreference = mp5
+End
+
+Template Punch
+	WeaponPreference = aug
+	WeaponPreference = sg552
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+End
+
+Template PunchT
+	WeaponPreference = sg552
+	WeaponPreference = aug
+	WeaponPreference = galil
+	WeaponPreference = famas
+	WeaponPreference = mp5
+End
+
+Template Sniper
+	WeaponPreference = awp
+	WeaponPreference = sg550
+	WeaponPreference = g3sg1
+	WeaponPreference = scout
+	WeaponPreference = mp5
+End
+
+Template Power
+	WeaponPreference = m249
+	WeaponPreference = xm1014
+	WeaponPreference = m3
+End
+
+Template Shotgun
+	WeaponPreference = xm1014
+	WeaponPreference = m3
+End
+
+Template Shield
+	WeaponPreference = shield
+	WeaponPreference = m4a1			// in case shield is disallowed
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+End
+
+Template Smg
+	WeaponPreference = p90
+	WeaponPreference = mp5
+	WeaponPreference = mac10
+	WeaponPreference = tmp
+End
+
+
+// skill templates
+Template Elite
+	Skill = 100
+	Aggression = 100
+	ReactionTime = 0.2
+	Cost = 5
+	Difficulty = EXPERT
+	VoicePitch = 85
+End
+
+Template Expert
+	Skill = 90
+	Aggression = 90
+	ReactionTime = 0.2
+	AttackDelay = 0.25
+	Cost = 4
+	Difficulty = EXPERT
+	VoicePitch = 88
+End
+
+Template VeryHard
+	Skill = 80
+	Aggression = 80
+	ReactionTime = 0.25
+	AttackDelay = 0.5
+	Cost = 3
+	Difficulty = HARD
+	VoicePitch = 92
+End
+
+Template Hard
+	Skill = 70
+	Aggression = 75
+	ReactionTime = 0.3
+	AttackDelay = 0.5
+	Cost = 3
+	Difficulty = HARD
+	VoicePitch = 94
+End
+
+Template NormalPlus
+	Skill = 60
+	Aggression = 60
+	ReactionTime = 0.35		// 0.2 - 0.4
+	AttackDelay = 0.75		// 0.3 - 0.4
+	Cost = 2
+	Difficulty = NORMAL+HARD
+	VoicePitch = 96
+End
+
+Template Normal
+	Skill = 50
+	Aggression = 50
+	ReactionTime = 0.4		// 0.2 - 0.4
+	AttackDelay = 0.75			// 0.3 - 0.4
+	Cost = 2
+	Difficulty = NORMAL
+End
+
+Template EasyPlus
+	Skill = 25
+	Aggression = 30
+	ReactionTime = 0.45		// 0.25 - 0.5
+	AttackDelay = 1.0			// 1.0 - 1.5f
+	Cost = 1
+	Difficulty = EASY+NORMAL
+	VoicePitch = 105
+End
+
+Template Easy
+	Skill = 0
+	Aggression = 20
+	ReactionTime = 0.5		// 0.25 - 0.5
+	AttackDelay = 1.0			// 1.0 - 1.5f
+	Cost = 1
+	Difficulty = EASY
+	VoicePitch = 110
+End
+
+
+//--------------------------------------------------------------------------------------------------------
+// 
+// CT enemies
+//
+
+//-------------------------------------------
+// Cost 1
+
+Easy JavaScript
+	Cost = 1
+
+	WeaponPreference = mp5
+
+	WeaponPreference = fn57
+	WeaponPreference = deagle
+	WeaponPreference = p228
+
+	Teamwork = 0
+	Aggression = 0
+
+	Skin = 3
+	VoicePitch = 115
+End
+
+Easy Python
+	Cost = 1
+
+	WeaponPreference = ump45
+
+	WeaponPreference = fn57
+	WeaponPreference = deagle
+	WeaponPreference = p228
+
+	Teamwork = 50
+	Aggression = 50
+
+	Skin = 2
+	VoicePitch = 113
+End
+
+Easy PHP
+	Cost = 1
+
+	WeaponPreference = m3
+
+	WeaponPreference = deagle
+	WeaponPreference = p228
+
+	Teamwork = 75
+	Aggression = 75
+
+	Skin = 5
+	VoicePitch = 120
+End
+
+Easy Ruby
+	Cost = 1
+
+	WeaponPreference = p90
+
+	WeaponPreference = deagle
+
+	Teamwork = 50
+	Aggression = 50
+
+	Skin = 4
+	VoicePitch = 111
+End
+
+Easy Java
+	Cost = 1
+
+	WeaponPreference = p90
+
+	WeaponPreference = deagle
+
+	Teamwork = 0
+	Aggression = 100
+
+	Skin = 1
+	VoicePitch = 90
+End
+
+Easy Swift
+	Cost = 1
+
+	WeaponPreference = mp5
+
+	Teamwork = 50
+	Aggression = 50
+
+	Skin = 3
+	VoicePitch = 103
+End
+
+Easy Kotlin
+	Cost = 1
+
+	WeaponPreference = ump45
+
+	Teamwork = 75
+	Aggression = 50
+
+	Skin = 1
+	VoicePitch = 98
+End
+
+Easy Go
+	Cost = 1
+
+	WeaponPreference = tmp
+
+	WeaponPreference = p228
+
+	Teamwork = 50
+	Aggression = 100
+
+	Skin = 4
+	VoicePitch = 107
+End
+
+//-------------------------------------------
+// Cost 2
+
+NormalPlus Lua
+	Cost = 2
+
+	WeaponPreference = famas
+	WeaponPreference = mp5
+
+	WeaponPreference = fn57
+	WeaponPreference = deagle
+	WeaponPreference = p228
+
+
+	Teamwork = 50
+	Aggression = 75
+
+	Skin = 4
+	VoicePitch = 86
+End
+
+NormalPlus Shell
+	Cost = 2
+
+	WeaponPreference = scout
+	WeaponPreference = tmp
+
+	WeaponPreference = fn57
+
+	Teamwork = 0
+	Aggression = 0
+
+	Skin = 3
+	VoicePitch = 115
+End
+
+NormalPlus Dart
+	Cost = 2
+
+	WeaponPreference = famas
+	WeaponPreference = mp5
+
+	WeaponPreference = deagle
+
+	Teamwork = 25
+	Aggression = 90
+
+	Skin = 1
+	VoicePitch = 95
+End
+
+NormalPlus C#
+	Cost = 2
+
+	WeaponPreference = famas
+	WeaponPreference = p90
+	WeaponPreference = mp5
+
+
+	Teamwork = 90
+	Aggression = 25
+
+	Skin = 3
+	VoicePitch = 90
+End
+
+NormalPlus Scala
+	Cost = 2
+
+	WeaponPreference = p90
+	WeaponPreference = mp5
+	WeaponPreference = tmp
+
+	WeaponPreference = deagle
+	WeaponPreference = p228
+
+	Teamwork = 75
+	Aggression = 50
+
+	Skin = 2
+	VoicePitch = 100
+End
+
+Normal C
+	Cost = 2
+
+	WeaponPreference = famas
+	WeaponPreference = tmp
+
+	WeaponPreference = fn57
+
+	Teamwork = 90
+	Aggression = 50
+
+	Skin = 1
+	VoicePitch = 105
+End
+
+Normal C++
+	Cost = 2
+
+	WeaponPreference = p90
+	WeaponPreference = ump45
+	WeaponPreference = mp5
+	WeaponPreference = tmp
+
+	WeaponPreference = deagle
+
+	Teamwork = 75
+	Aggression = 75
+
+	Skin = 3
+	VoicePitch = 110
+End
+
+Normal Rust
+	Cost = 2
+
+	WeaponPreference = xm1014
+	WeaponPreference = m3
+	WeaponPreference = ump45
+	WeaponPreference = mp5
+	WeaponPreference = tmp
+
+	Teamwork = 50
+	Aggression = 90
+
+	Skin = 4
+	VoicePitch = 88
+End
+
+
+
+//-------------------------------------------
+// Cost 3
+
+VeryHard+RifleT Haskell
+	Cost = 3							// cheaper because he doesn't listen at all
+
+	Teamwork = 0
+	Aggression = 100
+
+	Skin = 3
+	VoicePitch = 98
+End
+
+Hard+Power Erlang
+	Cost = 3
+
+	Teamwork = 75
+	Aggression = 75
+
+	Skin = 4
+	VoicePitch = 88
+End
+
+Hard+Smg Julia
+	Cost = 3
+
+	Teamwork = 90
+	Aggression = 25
+
+	Skin = 1
+	VoicePitch = 120
+End
+
+Hard+Rifle Fortran
+	Cost = 3
+
+	Teamwork = 50
+	Aggression = 90
+
+	Skin = 2
+	VoicePitch = 94
+End
+
+Hard+Shotgun COBOL
+	Cost = 3
+
+	Teamwork = 75
+	Aggression = 100
+
+	Skin = 3
+	VoicePitch = 110
+End
+
+Hard+Rifle Prolog
+	Cost = 3
+
+	Teamwork = 90
+	Aggression = 50
+
+	SKin = 1
+	VoicePitch = 90
+End
+
+Hard+Shield Lisp
+	Cost = 3
+
+	Teamwork = 75
+	Aggression = 75
+
+	Skin = 4
+	VoicePitch = 100
+End
+
+NormalPlus+Sniper Scheme
+	Cost = 3
+
+	Aggression = 0
+	Teamwork = 25
+
+	VoicePitch = 105
+	Skin = 2
+End
+
+
+
+//-------------------------------------------
+// Cost 4
+
+NormalPlus+Sniper Perl
+	Cost = 4
+
+	Aggression = 0
+	Teamwork = 80
+
+	VoicePitch = 100
+	Skin = 1
+End
+
+VeryHard+Shield Elm
+	Cost = 4
+
+	Aggression = 100
+	Teamwork = 100
+
+	VoicePitch = 90
+	Skin = 4
+End
+
+VeryHard+Punch ALGOL
+	Cost = 4
+
+	Aggression = 50
+	Teamwork = 80
+
+	VoicePitch = 87
+	Skin = 1
+End
+
+VeryHard+RifleT R
+	Cost = 4
+
+	Aggression = 80
+	Teamwork = 50
+
+	VoicePitch = 92
+	Skin = 3
+End
+
+VeryHard+Power Matlab
+	Cost = 4
+
+	Aggression = 75
+	Teamwork = 80
+
+	VoicePitch = 82
+	Skin = 4
+End
+
+VeryHard+Rifle F#
+	Cost = 4
+
+	Aggression = 50
+	Teamwork = 25
+
+	Skin = 1
+	VoicePitch = 95
+End
+
+VeryHard+Smg Common-Lisp
+	Cost = 4
+
+	Aggression = 75
+	Teamwork = 80
+
+	Skin = 2
+	VoicePitch = 105
+End
+
+//-------------------------------------------
+// Cost 5
+
+Elite+Sniper Elixir
+	Cost = 5
+
+	Aggression = 50
+	Teamwork = 100
+
+	Skin = 2
+	VoicePitch = 108
+End
+
+Elite+Smg Perl
+	Cost = 5
+
+	Aggression = 100
+	Teamwork = 100
+
+	Skin = 4
+	VoicePitch = 84
+End
+
+Elite+Rifle Assembly
+	Cost = 5
+
+	Aggression = 100
+	Teamwork = 100
+
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+RifleT Malbolge
+	Cost = 5
+
+	Aggression = 100
+	Teamwork = 100
+
+	Skin = 2
+	VoicePitch = 90
+End
+
+Elite+Punch Smalltalk
+	Cost = 5
+
+	Aggression = 100
+	Teamwork = 100
+
+	Skin = 1
+	VoicePitch = 92
+End
+
+Elite+Power Forth
+	Cost = 5
+
+	Aggression = 100
+	Teamwork = 100
+
+	Skin = 5
+	VoicePitch = 82
+End
+
+
+//--------------------------------------------------------------------------------------------------------
+//
+// Terrorist teammates
+//
+
+Easy Denur
+	WeaponPreference = scout
+	Aggression = 25
+	Teamwork = 25
+	Skin = 3
+	VoicePitch = 103
+End
+
+Easy Farah
+	WeaponPreference = mp5
+	Aggression = 50
+	Teamwork = 0
+	Skin = 2
+	VoicePitch = 105
+End
+
+Easy Najwa
+	WeaponPreference = m3
+	Aggression = 100
+	Teamwork = 25
+	Skin = 2
+	VoicePitch = 90
+End
+
+Easy Aulia
+	WeaponPreference = ump45
+	Aggression = 75
+	Teamwork = 25
+	Skin = 2
+	VoicePitch = 105
+End
+
+Easy Andrea
+	WeaponPreference = mac10
+	Aggression = 50
+	Teamwork = 50
+	Skin = 2
+	VoicePitch = 90
+End
+
+Easy Kristina
+	WeaponPreference = awp
+	Aggression = 0
+	Teamwork = 0
+	Skin = 3
+	VoicePitch = 103
+End
+
+//-------------------------------------------
+
+Normal Adam
+	WeaponPreference = mp5
+	Aggression = 50
+	Teamwork = 50
+	Skin = 4
+	VoicePitch = 111
+End
+
+Normal Rafli
+	WeaponPreference = p90
+	Aggression = 50
+	Teamwork = 50
+	Skin = 3
+	VoicePitch = 113
+End
+
+Normal Rafi
+	WeaponPreference = awp
+	WeaponPreference = scout
+
+	WeaponPreference = deagle
+
+	Aggression = 0
+	Teamwork = 0
+	Skin = 3
+	VoicePitch = 115
+End
+
+Normal Rizky
+	WeaponPreference = galil
+	WeaponPreference = mac10
+	Aggression = 90
+	Teamwork = 50
+	Skin = 2
+	VoicePitch = 105
+End
+
+Normal Banny
+	WeaponPreference = p90
+	WeaponPreference = mac10
+	Aggression = 75
+	Teamwork = 75
+	Skin = 4
+	VoicePitch = 110
+End
+
+Normal Naufal
+	WeaponPreference = scout
+
+	WeaponPreference = deagle
+
+	Aggression = 75
+	Teamwork = 25
+	Skin = 3
+	VoicePitch = 115
+End
+
+Normal Marwan
+	WeaponPreference = p90
+	WeaponPreference = mac10
+	Aggression = 95
+	Teamwork = 25
+	Skin = 3
+	VoicePitch = 115
+End
+
+//-------------------------------------------
+
+NormalPlus Bima
+	WeaponPreference = galil
+	WeaponPreference = mp5
+	WeaponPreference = mac10
+	Aggression = 75
+	Teamwork = 50
+	Skin = 4
+	VoicePitch = 88
+End
+
+NormalPlus Agung
+	WeaponPreference = xm1014
+	WeaponPreference = m3
+	Aggression = 90
+	Teamwork = 50
+	Skin = 4
+	VoicePitch = 88
+End
+
+NormalPlus Deni
+	WeaponPreference = galil
+	WeaponPreference = mac10
+	Aggression = 75
+	Teamwork = 50
+	Skin = 1
+	VoicePitch = 86
+End
+
+NormalPlus Ikctiar
+	WeaponPreference = mac10
+
+	WeaponPreference = deagle
+
+	Aggression = 75
+	Teamwork = 75
+	Skin = 1
+	VoicePitch = 120
+End
+
+NormalPlus Azkal
+	WeaponPreference = ump45
+
+	WeaponPreference = deagle
+
+	Aggression = 75
+	Teamwork = 75
+	ReactionTime = 0.2
+	Skin = 5
+	VoicePitch = 90
+End
+
+//-------------------------------------------
+
+Hard Wisnu
+	WeaponPreference = galil
+	WeaponPreference = mac10
+	Aggression = 100
+	Teamwork = 100
+	Skin = 1
+	VoicePitch = 86
+End
+
+Hard+Smg Tarigan
+	Aggression = 25
+	Teamwork = 90
+	Skin = 4
+	VoicePitch = 120
+End
+
+Hard+Rifle Faiz
+	Aggression = 100
+	Teamwork = 25
+	Skin = 2
+	VoicePitch = 98
+End
+
+Hard Fathir
+	WeaponPreference = xm1014
+	WeaponPreference = m3
+
+	WeaponPreference = deagle
+
+	Aggression = 80
+	Teamwork = 80
+	Skin = 2
+	VoicePitch = 94
+End
+
+//-------------------------------------------
+
+VeryHard Fariz
+	WeaponPreference = mac10
+	
+	WeaponPreference = deagle
+
+	Aggression = 100
+	Teamwork = 100
+	ReactionTime = 0.1
+	Skin = 5
+	VoicePitch = 105
+End
+
+VeryHard+RifleT Daiz
+	Aggression = 90
+	Teamwork = 50
+	Skin = 1
+	VoicePitch = 90
+End
+
+VeryHard+Smg Calvin
+	Aggression = 50
+	Teamwork = 75
+	Skin = 1
+	VoicePitch = 90
+End
+
+VeryHard+RifleT Lukman
+	Aggression = 50
+	Teamwork = 80
+	Skin = 4
+	VoicePitch = 100
+End
+
+VeryHard Farel
+	WeaponPreference = awp
+	WeaponPreference = scout
+
+	WeaponPreference = deagle
+
+	Aggression = 100
+	Teamwork = 50
+	Skin = 3
+	VoicePitch = 92
+End
+
+//-------------------------------------------
+
+Expert Eko
+	WeaponPreference = xm1014
+	WeaponPreference = m3
+
+	WeaponPreference = deagle
+
+	Aggression = 100
+	Teamwork = 100
+	ReactionTime = 0.1
+	Skin = 1
+	VoicePitch = 90
+End
+
+Expert+RifleT Zulfikar
+	Aggression = 75
+	Teamwork = 80
+	Skin = 1
+	VoicePitch = 105
+End
+
+Expert+RifleT Bolu
+	Aggression = 75
+	Teamwork = 80
+	Skin = 1
+	VoicePitch = 105
+End
+
+Expert+Smg Febri
+	Aggression = 100
+	Teamwork = 100
+	Skin = 2
+	VoicePitch = 105
+End
+
+Expert+Power Rendy
+	Aggression = 75
+	Teamwork = 100
+	Skin = 1
+	VoicePitch = 80
+End
+
+Expert Bolang
+	WeaponPreference = g3sg1
+	WeaponPreference = scout
+	WeaponPreference = mac10
+
+	WeaponPreference = deagle
+
+	Aggression = 100
+	Teamwork = 100
+	Skin = 3
+	VoicePitch = 80
+End
+
+Expert+RifleT Sapta
+	Aggression = 75
+	Teamwork = 80
+	Skin = 5
+	VoicePitch = 80
+End
+
+Expert+PunchT Henokh
+	Aggression = 100
+	Teamwork = 80
+	Skin = 4
+	VoicePitch = 80
+End
+
+//-------------------------------------------
+
+Elite+Sniper Aminah
+	Teamwork = 100
+	ReactionTime = 0.1
+	Skin = 2
+	VoicePitch = 94
+End
+
+Elite+Smg Bakoy
+	Teamwork = 100
+	ReactionTime = 0.1
+	Skin = 3
+	VoicePitch = 92
+End
+
+Elite+RifleT Hendid
+	Teamwork = 100
+	ReactionTime = 0.1
+	Skin = 4
+	VoicePitch = 80
+End
+
+Elite+PunchT Wanto
+	Teamwork = 100
+	ReactionTime = 0.1
+	Skin = 1
+	VoicePitch = 105
+End
+
+Elite+RifleT Rahmedi
+	Teamwork = 100
+	ReactionTime = 0.1
+	Skin = 5
+	VoicePitch = 90
+End

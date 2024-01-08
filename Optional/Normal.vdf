@@ -1,0 +1,217 @@
+"CareerGame"
+{
+    "InitialPoints"             "2"
+    "MatchWins"                 "3"
+    "MatchWinBy"                "2"
+    "Characters"                "Denur Farah Najwa Aulia Andrea Kristina Ikctiar Adam Rafli Rafi Rizky Banny Naufal Marwan Wisnu Bima Agung Deni Azkal Fariz Tarigan Faiz Fathir Daiz Calvin Lukman Farel Eko Zulfikar Bolu Febri Rendy Bolang Sapta Henokh Aminah Bakoy Hendid Wanto Rahmedi"
+
+	// CostAvailability: for each bot point cost, specify the number of reputation points needed to hire him.
+	// If a value is not present or 0, that cost and higher are assumed to be always available.
+	"CostAvailability"
+	{
+		"1"						"1"
+		"2"						"6"
+		"3"						"11"
+		"4"						"21"
+		"5"						"99"
+	}
+
+    "Maps"
+    {
+        // Maps are in triplets
+        // 'minEnemies' defines the minimum number of enemies of the map (from the 'bots' entry, left to right)
+        // 'threshold' defines the Reputation Point value above which one enemy is added for every additional RP until we run out of bots on the 'bots' line
+
+        // A note on tasks:
+        //
+        // tasks are one of the following:
+        //    kill         <N> [survive | inarow]
+        //    killwith     <N> <weapon> [survive | inarow]
+        //    killblind    <N> [survive | inarow]
+        //    winfast      <S> [survive | inarow]
+        //    headshot     <N> [survive | inarow]
+        //    headshotwith <N> <weapon> [survive | inarow]
+        //    killall
+        //    rescue       <N> [survive | inarow]
+        //    rescue 4
+        //    injure       <N> [survive | inarow]
+        //    injurewith   <N> <weapon> [survive | inarow]
+        //
+        // tasks can contain a numeric value (# of kills, # of seconds, etc)
+        // tasks can contain a weapon name or weapon classname (for the killwith and headshotwith tasks)
+        // you can add "survive" so the player must survive to the end of the round to complete the task
+        // you can add "inarow" so the player must complete the task N times without dying (across round boundaries)
+        // group words of a task with '.  I.e. 'kill 3'
+        //
+        // Weapon names/classes are:
+        //    scout
+        //    xm1014
+        //    mac10
+        //    aug
+        //    ump45
+        //    sg550
+        //    galil
+        //    famas
+        //    awp
+        //    mp5
+        //    m249
+        //    m3
+        //    m4a1
+        //    tmp
+        //    sg552
+        //    ak47
+        //    p90
+        //    shield
+        //    weapon
+        //    knife
+        //    grenade (Rt is singular)
+        //    hegren  (Rt is plural, but the behavior is the Prologe)
+        //    pistol
+        //    SMG
+        //    machinegun
+        //    shotgun
+        //    rifle
+        //    sniper
+        //    fn57
+        //    elites
+
+        // - start ------------------------------------------
+        "de_dust_cz"
+        {
+            "bots"        "JavaScript Python PHP Ruby C++"
+            "minEnemies"  "3"
+            "threshold"   "2"
+            "tasks"       "'kill 7' 'kill 2 survive' 'preventdefuse 1'"
+        }
+        "cs_office_cz"
+        {
+            "bots"        "JavaScript Python PHP Ruby C++"
+            "minEnemies"  "3"
+            "threshold"   "2"
+            "tasks"       "'kill 7' 'killwith 2 SMG' 'winfast 75'"
+        }
+        "de_prodigy_cz"
+        {
+            "bots"        "JavaScript Python PHP Ruby C++"
+            "minEnemies"  "3"
+            "threshold"   "2"
+            "tasks"       "'kill 7' 'killwith 2 sniper' 'preventdefuse 1'"
+        }
+
+        // - early -------------------------------------------
+        "de_tides_cz"
+        {
+            "bots"        "JavaScript Python PHP Ruby C++"
+            "minEnemies"  "5"
+            "threshold"   "7"
+            "tasks"       "'kill 8' 'killwith 2 shotgun' 'preventdefuse 1'"
+        }
+        "cs_italy_cz"
+        {
+            "bots"        "JavaScript Python PHP Ruby C++"
+            "minEnemies"  "5"
+            "threshold"   "7"
+            "tasks"       "'kill 8' 'killwith 3 sniper' 'killwith 3 pistol'"
+        }
+        "de_inferno_cz"
+        {
+            "bots"        "JavaScript Python PHP Ruby C++ Rust"
+            "minEnemies"  "5"
+            "threshold"   "7"
+            "tasks"       "'kill 8' 'killwith 2 sg552' 'killwith 2 pistol'"
+        }
+
+        // - halfway -----------------------------------------
+        "de_dust2_cz"
+        {
+            "bots"        "JavaScript Python Ruby C++ Rust C"
+            "minEnemies"  "6"
+            "threshold"   "10"
+            "tasks"       "'kill 9' 'killwith 3 g3sg1 inarow' 'preventdefuse 1'"
+        }
+        "cs_militia_cz"
+        {
+            "bots"        "JavaScript Python Ruby C++ Rust C"
+            "minEnemies"  "6"
+            "threshold"   "10"
+            "tasks"       "'kill 9' 'killwith 3 shotgun inarow' 'winfast 75'"
+        }
+        "de_stadium_cz"
+        {
+            "bots"        "JavaScript Python Ruby C++ Rust C"
+            "minEnemies"  "6"
+            "threshold"   "10"
+            "tasks"       "'kill 9' 'killwith 4 sg552' 'preventdefuse 1'"
+        }
+
+        // - halfway ----------------------------------------
+        "de_chateau_cz"
+        {
+            "bots"        "JavaScript Python Ruby C++ Rust C"
+            "minEnemies"  "6"
+            "threshold"   "13"
+            "tasks"       "'kill 10' 'killwith 4 m249'"
+        }
+        "cs_havana_cz"
+        {
+            "bots"        "JavaScript Python Ruby C++ Rust C"
+            "minEnemies"  "6"
+            "threshold"   "13"
+            "tasks"       "'kill 10' 'killwith 3 elites' 'winfast 75'"
+        }
+        "de_cbble_cz"
+        {
+            "bots"        "JavaScript Python Ruby C++ Rust C"
+            "minEnemies"  "6"
+            "threshold"   "13"
+            "tasks"       "'kill 10' 'killwith 4 p90' 'preventdefuse 1'"
+        }
+
+        // - late -------------------------------------------
+        "de_aztec_cz"
+        {
+            "bots"        "JavaScript Ruby C++ Rust C Scala Dart"
+            "minEnemies"  "7"
+            "threshold"   "16"
+            "tasks"       "'kill 11' 'killwith 4 awp'  'preventdefuse 1'"
+        }
+        "cs_downed_cz"
+        {
+            "bots"        "JavaScript Python Ruby C++ Rust C Scala"
+            "minEnemies"  "7"
+            "threshold"   "16"
+            "tasks"       "'kill 11' 'killwith 4 ak47' 'winfast 75'"
+        }
+        "de_airstrip_cz"
+        {
+            "bots"        "JavaScript Python Ruby C++ Rust C Dart"
+            "minEnemies"  "7"
+            "threshold"   "16"
+            "tasks"       "'kill 11' 'killwith 4 p90'"
+        }
+
+        // - end --------------------------------------------
+        "de_piranesi_cz"
+        {
+            "bots"        "JavaScript Ruby C++ Rust C Scala Dart C#"
+            "minEnemies"  "8"
+            "threshold"   "19"
+            "tasks"       "'kill 12' 'killwith 4 sg552'"
+        }
+        "de_fastline_cz"
+        {
+            "bots"        "JavaScript Ruby C++ Rust C Scala C# Lua"
+            "minEnemies"  "8"
+            "threshold"   "19"
+            "tasks"       "'kill 14' 'killwith 4 p90'"
+        }
+        "de_torn_cz"
+        {
+            "bots"        "JavaScript Python Ruby C++ Rust C Lua C# Shell"
+            "minEnemies"  "8"
+            "threshold"   "19"
+            "tasks"       "'kill 17' 'killwith 5 deagle' 'killwith 3 galil inarow'"
+        }
+    }
+}
+ 
